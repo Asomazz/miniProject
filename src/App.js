@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import PostCards from "./components/PostCards";
+import posts from "./data";
 
 function App() {
+  const postsList = posts.map((post) => {
+    return (
+      <PostCards
+        image={post.image}
+        title={post.title}
+        description={post.description}
+        likes={post.likes}
+      />
+    );
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>My cool instagram clone</h1>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: 10,
+          padding: 30,
+        }}
+      >
+        {postsList}
+      </div>
     </div>
   );
 }
