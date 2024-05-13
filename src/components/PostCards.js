@@ -18,9 +18,16 @@ const PostCards = ({ image, title, description, likes }) => {
           borderRadius: "5px",
           display: "flex",
           justifyContent: "center",
+          overflow: "hidden",
+          background: "red",
         }}
       >
-        <img src={image} />
+        <img
+          src={image}
+          style={{
+            width: "100%",
+          }}
+        />
       </div>
 
       <strong>{title}</strong>
@@ -33,14 +40,15 @@ const PostCards = ({ image, title, description, likes }) => {
         }}
       >
         {likes}likes
-        <button
+        <div
           style={{
             backgroundColor: "blue",
-            borderRadius: "2px",
+            borderRadius: "5px",
+            color: "white",
           }}
         >
           like
-        </button>
+        </div>
       </div>
     </div>
   );
