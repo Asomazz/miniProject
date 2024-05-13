@@ -21,7 +21,7 @@ function App() {
           display: "flex",
           flexWrap: "wrap",
           gap: 10,
-          padding: 30,
+          padding: 20,
         }}
       >
         {postsList}

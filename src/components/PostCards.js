@@ -30,21 +30,28 @@ const PostCards = ({ image, title, description, likes }) => {
         />
       </div>
 
-      <strong>{title}</strong>
+      <h3>
+        <strong>{title}</strong>
+      </h3>
 
-      {description}
+      <div style={{ color: "gray" }}>
+        <h4>{description}</h4>
+      </div>
       <div
         style={{
           display: "flex",
           justifyContent: "space-between",
         }}
       >
-        {likes}likes
+        <strong>{likes} likes</strong>
         <div
           style={{
-            backgroundColor: "blue",
+            backgroundColor: "#007cfe",
             borderRadius: "5px",
             color: "white",
+            padding: 5,
+            width: 40,
+            textAlign: "center",
           }}
         >
           like
